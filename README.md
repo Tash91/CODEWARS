@@ -1,3 +1,3 @@
 # CODEWARS
 Code wars challenges 
-![Codewars] https://www.codewars.com/users/The_Piscean_Code/badges/large
+![Codewars](https://github.r2v.ch/codewars?user=The_Piscean_Code)
