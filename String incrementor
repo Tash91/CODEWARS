@@ -1,0 +1,64 @@
+def increment_string(string):
+    
+
+    sep_num =[]
+    sep_let =[]
+    
+    counter = -1
+    
+    for numlet in string:
+        inc_string = string[counter]
+        inc_string_m1 = string[counter -1]
+        if inc_string.isnumeric() and inc_string_m1.isnumeric() :
+            sep_num.append(inc_string)
+            counter -=1
+        elif inc_string.isnumeric() and inc_string_m1.isalpha():
+            sep_num.append(inc_string)
+            ind = string.index(numlet)
+            remaining = string[:counter]
+            sep_let.append(remaining)
+            break
+        
+        else:
+            sep_let.append(numlet)
+            
+    sep_num.reverse()
+        
+    if sep_num == [] and len(sep_let) !=0:
+        join_sl = "".join(sep_let)
+        s_add_1 = "1"
+        return f"{join_sl}{s_add_1}"    
+    
+    elif sep_num == [] and sep_num == []:
+        join_sl = ""
+        s_add_1 = "1"
+        return f"{join_sl}{s_add_1}"
+        
+    elif sep_num[0] == '0':
+        len_sn = len(sep_num)
+        join_sl = "".join(sep_let)
+        join_sn = "".join(sep_num)
+        i_num = int(join_sn)
+        add_1 = i_num + 1
+        s_add_1 =f"{add_1:0{len_sn}}"
+        return f"{join_sl}{s_add_1}"
+        
+       
+            
+    
+        
+    elif sep_num[-1] == "9":
+        join_sl= "".join(sep_let)
+        s_num = "".join(sep_num)
+        i_num = int(s_num)
+        add_1 = i_num + 1
+        s_add_1 = str(add_1)
+        return f"{join_sl}{s_add_1}"
+        
+    else:
+        join_sl= "".join(sep_let)
+        s_num = "".join(sep_num)
+        i_num = int(s_num)
+        add_1 = i_num + 1
+        s_add_1 = str(add_1)
+        return f"{join_sl}{s_add_1}"
