@@ -20,7 +20,9 @@ def increment_string(string):
             break
         
         else:
-            sep_let.append(numlet)
+            remaining = string[0:]
+            sep_let.append(remaining)
+            break
             
     sep_num.reverse()
         
