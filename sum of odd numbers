@@ -1,0 +1,14 @@
+def row_sum_odd_numbers(n):
+    num_list = []
+    counter = 0
+    start = (n * (n-1)) + 1
+   
+    
+    for _ in range(n):
+        num_list.append(start)
+        start += 2 
+        
+    add = sum(num_list)
+    
+    return add 
+        
